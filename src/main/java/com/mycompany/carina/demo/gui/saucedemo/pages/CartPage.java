@@ -38,10 +38,10 @@ public class CartPage extends AbstractPage {
     }
 
     public ProductItem findProductByName(String name) {
-        return products.stream().filter(e -> e.readProductName().equalsIgnoreCase(name)).findFirst().get();
+        return products.stream().filter(e -> e.getProductName().equalsIgnoreCase(name)).findFirst().get();
     }
 
-    public int getShoppingCartAmount() {
+    public int getProductsCount() {
         return products.size();
     }
 
