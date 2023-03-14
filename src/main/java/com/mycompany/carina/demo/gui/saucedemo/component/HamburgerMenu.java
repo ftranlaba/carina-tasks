@@ -9,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class HamburgerMenu extends AbstractUIObject {
-    // //div[@class='inventory_item_name'][text()='%s']
     @FindBy(xpath = "//a[contains(@id, 'sidebar_link')]")
     private List<ExtendedWebElement> linkList;
 

@@ -20,7 +20,6 @@ public class SortBar extends AbstractUIObject {
         super(driver, searchContext);
     }
 
-    // associate enum with string
     public void clickSortOption(SortOptions param) {
         if (param.equals(SortOptions.SORT_BAR)) {
             sortBar.click();
@@ -29,7 +28,6 @@ public class SortBar extends AbstractUIObject {
         }
     }
 
-    // return enum instead of String
     public SortOptions getCurrentOption() {
         return Arrays.stream(SortOptions.values()).filter(e -> e.getVal().equalsIgnoreCase(activeOption.getText())).findFirst().get();
     }
