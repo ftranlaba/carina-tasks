@@ -5,7 +5,7 @@ import com.mycompany.carina.demo.gui.saucedemo.pages.ProductPage;
 import com.zebrunner.carina.utils.R;
 import com.zebrunner.carina.utils.factory.ICustomTypePageFactory;
 // move to utils
-public class UtilTest implements ICustomTypePageFactory {
+public class AuthUtils implements ICustomTypePageFactory {
     private static String username = "standard_user";
     private static String password = "secret_sauce";
 
@@ -21,13 +21,4 @@ public class UtilTest implements ICustomTypePageFactory {
     public ProductPage loginAsStandardUser() {
         return loginAsStandardUser(R.TESTDATA.get("test_username"), R.TESTDATA.get("test_password"));
     }
-
-    public String getSampleNameData(){
-        return "SomeName";
-    }
-
-    public int getSampleNumberData(){
-        return 10;
-    }
-
 }

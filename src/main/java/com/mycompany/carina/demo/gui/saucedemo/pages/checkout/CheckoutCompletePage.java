@@ -11,9 +11,9 @@ import org.slf4j.LoggerFactory;
 import java.lang.invoke.MethodHandles;
 import java.util.List;
 
-public class CheckoutOverviewPage extends AbstractPage {
+public class CheckoutCompletePage extends AbstractPage {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-    private final String pageUrl = "https://www.saucedemo.com/checkout-step-one.html";
+    private final String pageUrl = "https://www.saucedemo.com/checkout-complete.html";
 
     @FindBy(xpath = "//*[@id='finish']")
     private ExtendedWebElement finishButton;
@@ -21,14 +21,13 @@ public class CheckoutOverviewPage extends AbstractPage {
     @FindBy(className = "cart_item")
     private List<ProductItem> products;
 
-    public CheckoutOverviewPage(WebDriver driver) {
+    public CheckoutCompletePage(WebDriver driver) {
         super(driver);
         setPageAbsoluteURL(pageUrl);
     }
 
-    public CheckoutCompletePage clickFinishButton() {
+    public void clickFinishButton() {
         finishButton.click();
-        return new CheckoutCompletePage(driver);
     }
 
     public int getProductsCount() {

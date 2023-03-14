@@ -54,8 +54,9 @@ public class ProductPage extends AbstractPage {
         findProductByName(product).clickRemoveButton();
     }
 
-    public void clickShoppingCart() {
+    public CartPage clickShoppingCart() {
         shoppingCartIconButton.click();
+        return new CartPage(driver);
     }
 
     public Boolean isShoppingCartIconPresent() {
