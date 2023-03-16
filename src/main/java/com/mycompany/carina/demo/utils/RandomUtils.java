@@ -6,7 +6,6 @@ import com.zebrunner.carina.utils.R;
 import com.zebrunner.carina.utils.factory.ICustomTypePageFactory;
 import org.apache.commons.lang3.RandomStringUtils;
 
-// move to utils
 public class RandomUtils implements ICustomTypePageFactory {
     public String getRandomString(){
         return RandomStringUtils.randomAlphabetic(10);

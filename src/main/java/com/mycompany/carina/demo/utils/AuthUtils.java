@@ -4,7 +4,7 @@ import com.mycompany.carina.demo.gui.saucedemo.pages.LoginPage;
 import com.mycompany.carina.demo.gui.saucedemo.pages.ProductPage;
 import com.zebrunner.carina.utils.R;
 import com.zebrunner.carina.utils.factory.ICustomTypePageFactory;
-// move to utils
+
 public class AuthUtils implements ICustomTypePageFactory {
     private static String username = "standard_user";
     private static String password = "secret_sauce";

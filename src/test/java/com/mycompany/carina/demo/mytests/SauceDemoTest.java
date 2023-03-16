@@ -56,8 +56,8 @@ public class SauceDemoTest extends AbstractSauceDemoTest {
         CartPage cartPage = new CartPage(getDriver());
         cartPage.clickCheckOutButton();
         CheckoutYourInformationPage checkoutYourInformationPage = new CheckoutYourInformationPage(getDriver());
-        checkoutYourInformationPage.typeFirstNameInput("f");
-        checkoutYourInformationPage.typeLastNameInput("f");
+        checkoutYourInformationPage.typeFirstNameInput(randomUtils.getRandomString());
+        checkoutYourInformationPage.typeLastNameInput(randomUtils.getRandomNumber(1, 10) + "");
         checkoutYourInformationPage.typePostalCodeInput("12345");
         checkoutYourInformationPage.clickContinueButton();
         CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage(getDriver());
