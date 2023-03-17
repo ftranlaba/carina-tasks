@@ -54,8 +54,9 @@ public class ProductPage extends AbstractPage {
         findProductByName(product).clickRemoveButton();
     }
 
-    public void clickShoppingCart() {
+    public CartPage clickShoppingCart() {
         shoppingCartIconButton.click();
+        return new CartPage(driver);
     }
 
     public Boolean isShoppingCartIconPresent() {
@@ -63,7 +64,7 @@ public class ProductPage extends AbstractPage {
     }
 
     public ProductItem findProductByName(String name) {
-        return products.stream().filter(e -> e.readProductName().equalsIgnoreCase(name)).findFirst().get();
+        return products.stream().filter(e -> e.getProductName().equalsIgnoreCase(name)).findFirst().get();
     }
 
     public int getShoppingCartAmount() {

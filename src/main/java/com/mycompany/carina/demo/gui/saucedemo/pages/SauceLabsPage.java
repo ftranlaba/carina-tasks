@@ -17,9 +17,6 @@ public class SauceLabsPage extends AbstractPage {
     @FindBy(className = "css-chbenk")
     private ExtendedWebElement tryItFreeRow;
 
-    // use element on this page to assert
-    // setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
-    //        setUiLoadedMarker(titleLabel);
     public SauceLabsPage(WebDriver driver) {
         super(driver);
         setPageAbsoluteURL(sauceLabsUrl);
